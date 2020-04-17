@@ -1,7 +1,28 @@
+function checkGrade(evt) {
+  var grade =parseFloat(evt.currentTarget.value);
+
+  if (grade > 100 || grade < 0) {
+    console.log("Wrong value")
+    evt.currentTarget.style.color = "red"
+  } else {
+    console.log("Correct Value")
+    evt.currentTarget.style.color = "black"
+
+  }
+
+}
+
 function CalculateGrade() {
   var PartGrade = parseInt(document.getElementById("PartGrade").value)
   var Participation_Percentage = parseFloat(document.getElementById("Participation_Percentage").innerHTML)
-  var Curr_Participation = Participation_Percentage * PartGrade/100
+  if (PartGrade < 0 || PartGrade > 100) {
+    document.getElementById("PartGrade").value = 0;
+    document.getElementById("PartGrade").style = "background-color:red"
+  } else {
+    var Curr_Participation = Participation_Percentage * PartGrade/100
+  }
+  
+  
 
 
   var HWGrade = parseInt(document.getElementById("HWGrade").value)
