@@ -1,15 +1,7 @@
-body, html {
-  margin: 0;
-}
-#course {
-  background-color: lavenderblush; 
-  height: 160px;
-  
-}
 
-#grades {
-  background-color: lavender; 
-  height: 700px;
+body, html {
+  background-color: lavender;
+  margin: 0;
 }
 
 #course span 
